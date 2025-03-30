@@ -1,6 +1,6 @@
 {
   "name": "tailwind-extended-colors",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Uma extensão de cores para TailwindCSS carregadas de um JSON.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
