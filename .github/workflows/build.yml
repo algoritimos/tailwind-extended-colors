@@ -1,3 +1,42 @@
+# name: Build and Publish
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: '22'
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       # - name: Run tests
+#       #   run: npm test
+
+#       - name: Increment version
+#         run: |
+#           NEW_VERSION=$(npm version patch -m "Release v%s")
+#           echo "New version: $NEW_VERSION"
+#           git push origin --tags
+
+#       - name: Build the project
+#         run: npm run build
+
+#       - name: Publish package to GitHub Packages
+#         run: npm publish --access public
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 name: Build and Publish
 
 on:
@@ -20,8 +59,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Run tests
-      #   run: npm test
+      - name: Set git config
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
 
       - name: Increment version
         run: |
