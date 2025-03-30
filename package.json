@@ -11,7 +11,7 @@
   },
   "scripts": {
     "clean": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\"",
-    "build": "npm run clean && npx jest && npx tsc",
+    "build": "npx jest && npx tsc",
     "run": "npm run build",
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
