@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "outDir": "dist", // Diretório de saída dos arquivos compilados
+      "rootDir": "src", // Diretório raiz dos arquivos TypeScript
+      "module": "NodeNext", // Usa o ESNext para suportar import/export moderno
+      "target": "ESNext", // Garante suporte a recursos modernos do JS
+      "lib": ["ESNext", "DOM"], // Suporte para APIs modernas do JS e do navegador
+      "strict": true, // Ativa verificações rigorosas de TypeScript
+      "declaration": true, // Gera arquivos .d.ts para a biblioteca
+      "declarationMap": true, // Permite mapear declarações para melhor debugging
+      "sourceMap": true, // Gera arquivos de mapa de fonte para debugging
+      "moduleResolution": "NodeNext", // Resolve módulos no estilo Node.js
+      "allowSyntheticDefaultImports": true, // Permite importar pacotes sem default export
+      "esModuleInterop": true, // Garante compatibilidade com CommonJS e ESM
+      "skipLibCheck": true, // Ignora verificação de tipos de dependências
+      "forceConsistentCasingInFileNames": true // Evita problemas de case-sensitive em importações
+    },
+    "include": ["src"], // Inclui todos os arquivos na pasta `src`
+    "exclude": ["node_modules", "dist"] // Exclui arquivos desnecessários
+  }
+  
